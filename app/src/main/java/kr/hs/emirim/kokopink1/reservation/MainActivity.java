@@ -35,6 +35,28 @@ public class MainActivity extends AppCompatActivity {
         timeP.setVisibility(View.INVISIBLE); //보이지 않게
         calView.setVisibility(View.INVISIBLE);
 
+        radioDate.setOnClickListener(new View.OnClickListener() {  //()안에 객체생성한 상속값
+            @Override
+            public void onClick(View v) {
+                calView.setVisibility(View.VISIBLE);
+                timeP.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        radioTime.setOnClickListener(new View.OnClickListener() {  //()안에 객체생성한 상속값
+            @Override
+            public void onClick(View v) {
+                calView.setVisibility(View.INVISIBLE);
+                timeP.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+
     }
 }
-
+/*     핸들러 클래스 -  익명 클래스 (이름없이 클래스를 구현 + 객체생성)
+            *
+            * (EventListener (감시자))
+       - 날짜 설정
+       - 시간 설정 (Event Source) */
